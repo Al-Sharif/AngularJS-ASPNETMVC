@@ -1,16 +1,16 @@
-﻿var ngApp = angular.module('ngApp', []);
+﻿var ngApp = angular.module('ngApp', ['ngRoute']);
 ngApp.controller('HomeController', HomeController);
 
-var configFunction = Function($routeProvider){
+var configFunction = function($routeProvider){
     $routeProvider.
         when('/routeOne',{
             templateUrl: 'routesDemo/one'
         })
         .when('/routeTwo', {
-            templateUrl: 'routesDemo/Two'
+            templateUrl: 'routesDemo/two'
         })
         .when('/routeThree', {
-            templateUrl: 'routesDemo/Three'
+            templateUrl: 'routesDemo/three'
         });
     
 }
